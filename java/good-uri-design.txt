@@ -1,0 +1,7 @@
+points to be considered for a Good URI design.
+- dont construst URL at client side as  it more difficult to maintain a consistent and predictable URL structure. This can lead to issues with broken links, as well as challenges in managing redirects and other issues related to URL changes.
+- Keep URIs short
+- Avoid special characters
+- Use consistent URI structure: Consistency in URI structure makes it easier to manage and maintain the URI scheme over time. Consider using a consistent format for different types of resources on your website.
+- Use lowercase letters and hyphen and dont use space.
+
