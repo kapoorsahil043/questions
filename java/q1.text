@@ -1,0 +1,7 @@
+which data structure can erase from its beginning or its end in O(1) time from the following options?
+1. deque
+2. vector
+3. stack
+4. segment tree
+
+ans -> deque
