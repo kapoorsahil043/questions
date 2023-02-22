@@ -1,0 +1,18 @@
+import java.util.stream.*;
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+      
+        int arr[] = { 1, 2, 3, 4, 5 };
+  
+        // Using Arrays.stream() to convert
+        // array into Stream
+        int stream = Arrays.stream(new int[]{1, 2, 3, 4, 5}).filter(i->i%2==0).map(i->i*2).sum();
+  
+        // Displaying elements in Stream
+        System.out.println(stream);
+    }
+}
+
+output -> 12
