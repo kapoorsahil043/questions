@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+
+class Color{
+    private String name;
+    
+    public Color(String name){
+        this.name = name;
+    }
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+
+    Map<Color,String> g = new HashMap<>();
+    g.put(new Color("Red"),"Red");
+    g.put(new Color("Blue"),"Blue");
+    g.put(new Color("Green"),"Green");
+      
+      System.out.println(g.get(new Color("Blue")));
+    }
+}
+
+output - null
