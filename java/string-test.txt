@@ -26,5 +26,5 @@ public class MyClass {
 
 output - true - true
 
-When you call intern() on a String object, Java checks if the string value is already present in the pool of interned strings. If it is, then it returns a reference to that string in the pool. If it is not present in the pool, it adds the string to the pool and returns a reference to the newly interned string.
-
+When you call intern() on a String object, Java checks if the string value is already present in the pool of interned strings. 
+If it is, then it returns a reference to that string in the pool. If it is not present in the pool, it adds the string to the pool and returns a reference to the newly interned string.
