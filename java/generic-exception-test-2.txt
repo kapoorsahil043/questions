@@ -1,0 +1,21 @@
+public class MyClass<T> {
+    T value;
+    
+    public MyClass(T value){
+        this.value = value;
+        
+    }
+    
+    public T getValue(){
+        return value;
+    }
+    
+    public static void main(String args[]) {
+      MyClass<String> a = new MyClass<>("abc");
+      MyClass<Integer> a = new MyClass<>(123);
+      System.out.println(a.getValue());
+      System.out.println(b.getValue());
+    }
+}
+
+output - No "public class" found to execute
