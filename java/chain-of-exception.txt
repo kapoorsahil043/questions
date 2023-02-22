@@ -7,27 +7,41 @@ public class MyClass {
     }
     
     private void f1(){
+        System.out.println("f1, " + temp);
         try{
             f2();
         }catch(Exception e){
+            System.out.println("f1-catch," + temp);
             temp+=5;
         }
     }
     
     private void f2() throws Exception{
+        System.out.println("f2, " + temp);
         try{
             f3();
         }catch(Exception e){
+            System.out.println("f2-catch, " + temp);
             throw new Exception();
         }finally{
+            System.out.println("f2-finally, " + temp);
             temp+=4;
         }
+        System.out.println("f2-end " + temp);
         temp+=5;
     }
     
     private void f3() throws Exception{
+        System.out.println("f3, " + temp);
         throw new Exception();
     }
 }
 
-OUTPUT - 145
+output - 
+f1, 1
+f2, 1
+f3, 1
+f2-catch, 1
+f2-finally, 1
+f1-catch,14
+145
