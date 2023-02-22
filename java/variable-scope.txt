@@ -1,0 +1,41 @@
+interface Calc{
+    void cal(int item);
+}
+
+class D1 implements Calc{
+    int x;
+    public void cal(int item){
+        x = item * item;
+    }
+}
+
+class D2 implements Calc{
+    int x;
+    public void cal(int item){
+        x = item / item;
+    }
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+      D1 a = new D1();
+      D2 b= new D2();
+      a.x = 0;
+      b.x = 0;
+      
+      a.cal(2);
+      b.cal(2);
+      
+      System.out.println(a.x + " - " + b.x);
+      
+    }
+    
+}
+
+output - 
+4 - 1
+
+
+//since the variable in class has no access modifier, the it has access scope with in the package.
+//If this variable would have been in the different package, then there woud have been an error (x is not public in D1; cannot be accessed from outside package
+//        a.x = 0;)
