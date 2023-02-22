@@ -1,0 +1,33 @@
+class Test{
+    public void div(int a,int b){
+        try{
+            int c= a/b;
+        }
+        finally{
+            System.out.println("finally");
+        }
+    } 
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+        Test t = new Test();
+        try{
+            t.div(3,0);
+        }catch(RuntimeException re){
+            System.out.println("re");
+        }catch(Exception e){
+            System.out.println("e");
+        }finally{
+            System.out.println("f2");
+        }
+        System.out.println("end");
+        
+    }
+}
+
+output - 
+finally
+re
+f2
+else
