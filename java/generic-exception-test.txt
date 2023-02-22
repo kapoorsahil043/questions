@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+
+public class MyClass {
+    public static void main(String args[]) {
+
+ Set<? extends IOException> s = new TreeSet<IOException>();
+// error error: unexpected type/ required: class or interface without bounds
+
+Set<? extends IOException> s = new TreeSet<RuntimeException>();
+//error: incompatible types: TreeSet<RuntimeException> cannot be converted to Set<? extends IOException>
+
+
+Set<? extends IOException> s = new TreeSet<FileNotFoundException>();
+//success
+
+
+Set<? extends IOException> s = new HashSet<Exception>();
+//MyClass.java:11: error: incompatible types: HashSet<Exception> cannot be converted to Set<? extends IOException>
+
+
+
+    }
+}
