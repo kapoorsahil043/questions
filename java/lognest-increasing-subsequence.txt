@@ -29,3 +29,5 @@ public class LISExample {
         System.out.println("Length of Longest Increasing Subsequence is " + maxLIS);
     }
 }
+
+Length of Longest Increasing Subsequence is 5
